@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightLens - AI Image Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>InsightLens - AI Image Analyzer</h1>
+
+        <div class="input-area">
+            <label for="imageUpload">Upload an Image:</label>
+            <input type="file" id="imageUpload" accept="image/*">
+            <p>OR</p>
+            <label for="imageUrl">Paste Image URL:</label>
+            <input type="text" id="imageUrl" placeholder="https://example.com/image.jpg">
+        </div>
+
+        <button id="analyzeButton">Analyze Image</button>
+
+        <div class="preview-area">
+            <h2>Preview:</h2>
+            <img id="imagePreview" src="#" alt="Image Preview" style="max-width: 300px; max-height: 300px; display: none;">
+            <p id="previewMessage">No image selected.</p>
+        </div>
+
+        <div class="results-area">
+            <h2>Results:</h2>
+            <p id="loadingIndicator" style="display: none;">Loading...</p>
+            <div id="resultsContent">
+                <!-- AI results will be displayed here -->
+            </div>
+            <p id="errorMessage" style="color: red; display: none;"></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

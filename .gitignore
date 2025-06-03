@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+*.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor specific
+.vscode/
+.idea/
+
+# Model cache (Hugging Face models are usually cached elsewhere, 
+# but good to be aware if any large files get generated locally)
+# For example, if you had a local 'models/' directory you didn't want to push:
+# models/ 
+
+# Uploads folder (if you create one and don't want to commit test uploads)
+# uploads/
